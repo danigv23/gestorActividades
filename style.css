@@ -1,0 +1,139 @@
+* {
+    margin: 0px;
+    padding: 0;
+    font-family: "Aldrich", sans-serif;
+
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    gap: 5px;
+
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer"
+    ;
+}
+
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    background-color: violet;
+}
+
+aside li {
+    font-size: 35px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid red;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+header {
+    grid-area: header;
+    background-color: forestgreen;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+main {
+    grid-area: main;
+    background-color: peru;
+}
+
+footer {
+    grid-area: footer;
+    background-color: gold;
+}
+
+header img {
+    height: 60px;
+    width: 80px;
+    margin: 0px 20px;
+}
+
+#gridAct {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, auto);
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    padding: 15px;
+    border: 1px solid black;
+    background-color: aqua;
+    width: 350px;
+}
+
+.card .bot {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.card button {
+    /* height: 50px;
+    width: 50px; */
+    font-size: 17px;
+    padding: 5px;
+    border-radius: 25px;
+    background-color: chartreuse;
+}
+
+
+.card h1 {
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+.card img {
+    border: 1px solid black;
+    height: 100px;
+    width: 100%;
+}
+
+.card .sub {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card p {
+    font-size: 20px;
+    background-color: coral;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.card button:nth-child(odd) {
+    border-radius: 25px 0 0 25px;
+}
+
+.card button:nth-child(even) {
+    border-radius: 0 25px 25px 0;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 3px 4px 3px black;
+}
