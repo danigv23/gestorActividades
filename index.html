@@ -40,7 +40,7 @@
 
         <div id="abajo">
             <label for="tiempo" class="op1"> Tiempo estimado:
-                <input type="range" id="tiempo" name="tiempo" min="5" max="480" value="90" step="5" />
+                <input type="range" id="tiempo" name="tiempo" min="5" max="480" value="100" step="5" />
             </label>
 
             <label class="op1"> Prioridad:
@@ -60,6 +60,10 @@
             </label>
         </div>
 
+        <label id="check" for="estado" class="op1">Completada:
+            <input type="checkbox" name="estado" id="estado">
+        </label>
+
         <div id="botAct" class="bot">
             <button id="canAct" class="r">Cancelar</button>
             <button id="addAct">Añadir actividad</button>
@@ -75,7 +79,7 @@
         <ul>
             <li>Gestion</li>
             <li>Resumen</li>
-            <li>Cerrar Sesion</li>
+            <!-- <li>Cerrar Sesion</li> -->
         </ul>
     </aside>
     <main>

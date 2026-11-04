@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: 100px 1fr 100px;
-    gap: 5px;
+    gap: 10px;
 
     grid-template-areas:
         "header header"
@@ -233,4 +233,14 @@ button:hover {
 
 #form .r {
     background-color: red;
+}
+
+#form .inc {
+    border: 3px solid red;
+}
+
+#check {
+    display: flex;
+    flex-direction: row;
+
 }
