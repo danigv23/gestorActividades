@@ -7,9 +7,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Gest. de Actividades</title>
+    <script src="app.js" defer></script>
 </head>
 
 <body id="grid">
+    <div id="form" hidden>
+        <h1>Nueva actividad: </h1>
+
+        <label for="titulo" class="op1"> Titulo:
+            <input type="text" name="titulo" id="titulo" class="corto">
+        </label>
+
+        <label for="descripcion" class="op1"> Descripcion:
+            <input type="text" name="descripcion" id="descripcion">
+        </label>
+
+        <label for="categoria" class="op1"> Categoria:
+            <input type="text" name="categoria" id="categoria" list="cat" class="corto">
+        </label>
+
+        <datalist id="cat">
+            <option value="Trabajo">
+            <option value="Estudios">
+            <option value="Deporte">
+            <option value="Salud">
+            <option value="Alimentación">
+            <option value="Ocio">
+            <option value="Finanzas">
+            <option value="Hogar">
+            <option value="Otros">
+        </datalist>
+
+        <div id="abajo">
+            <label for="tiempo" class="op1"> Tiempo estimado:
+                <input type="range" id="tiempo" name="tiempo" min="5" max="480" value="90" step="5" />
+            </label>
+
+            <label class="op1"> Prioridad:
+                <div id="opPrio">
+                    <label for="prioOp1">
+                        <input type="radio" id="prioOp1" name="prioridad" value="Baja" class="op2"> Baja
+                    </label>
+
+                    <label for="prioOp2">
+                        <input type="radio" id="prioOp2" name="prioridad" value="Media" class="op2"> Media
+                    </label>
+
+                    <label for="prioOp3">
+                        <input type="radio" id="prioOp3" name="prioridad" value="Alta" class="op2"> Alta
+                    </label>
+                </div>
+            </label>
+        </div>
+
+        <div id="botAct" class="bot">
+            <button id="canAct" class="r">Cancelar</button>
+            <button id="addAct">Añadir actividad</button>
+        </div>
+    </div>
+
     <header>
         <img id="logo" src="./img/logo.png" alt="logo aplicacion">
         <h1>Gestor de Actividades</h1>
@@ -24,7 +80,109 @@
     </aside>
     <main>
         <p>Actividades</p>
+
+        <img id="newAct" src="./svg/add-ellipse-svgrepo-com.svg" alt="">
+
         <div id="gridAct">
+            <div class="card">
+                <img src="./img/logo.png" alt="Ilustracion actividad">
+                <h1>Terminar Practica 1</h1>
+                <div class="sub">
+                    <p>25 mins</p>
+                    <div class="bot">
+                        <button>Editar</button>
+                        <button>Finalizar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/logo.png" alt="Ilustracion actividad">
+                <h1>Terminar Practica 1</h1>
+                <div class="sub">
+                    <p>25 mins</p>
+                    <div class="bot">
+                        <button>Editar</button>
+                        <button>Finalizar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/logo.png" alt="Ilustracion actividad">
+                <h1>Terminar Practica 1</h1>
+                <div class="sub">
+                    <p>25 mins</p>
+                    <div class="bot">
+                        <button>Editar</button>
+                        <button>Finalizar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/logo.png" alt="Ilustracion actividad">
+                <h1>Terminar Practica 1</h1>
+                <div class="sub">
+                    <p>25 mins</p>
+                    <div class="bot">
+                        <button>Editar</button>
+                        <button>Finalizar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/logo.png" alt="Ilustracion actividad">
+                <h1>Terminar Practica 1</h1>
+                <div class="sub">
+                    <p>25 mins</p>
+                    <div class="bot">
+                        <button>Editar</button>
+                        <button>Finalizar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/logo.png" alt="Ilustracion actividad">
+                <h1>Terminar Practica 1</h1>
+                <div class="sub">
+                    <p>25 mins</p>
+                    <div class="bot">
+                        <button>Editar</button>
+                        <button>Finalizar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/logo.png" alt="Ilustracion actividad">
+                <h1>Terminar Practica 1</h1>
+                <div class="sub">
+                    <p>25 mins</p>
+                    <div class="bot">
+                        <button>Editar</button>
+                        <button>Finalizar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/logo.png" alt="Ilustracion actividad">
+                <h1>Terminar Practica 1</h1>
+                <div class="sub">
+                    <p>25 mins</p>
+                    <div class="bot">
+                        <button>Editar</button>
+                        <button>Finalizar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/logo.png" alt="Ilustracion actividad">
+                <h1>Terminar Practica 1</h1>
+                <div class="sub">
+                    <p>25 mins</p>
+                    <div class="bot">
+                        <button>Editar</button>
+                        <button>Finalizar</button>
+                    </div>
+                </div>
+            </div>
             <div class="card">
                 <img src="./img/logo.png" alt="Ilustracion actividad">
                 <h1>Terminar Practica 1</h1>
