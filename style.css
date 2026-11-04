@@ -88,14 +88,16 @@ header img {
 }
 
 .card button {
-    /* height: 50px;
-    width: 50px; */
     font-size: 17px;
     padding: 5px;
-    border-radius: 25px;
     background-color: chartreuse;
+    border: 1px solid black;
+    box-shadow: 3px 4px 3px black;
 }
 
+.card button:hover {
+    box-shadow: 6px 8px 6px black;
+}
 
 .card h1 {
     margin: 10px 0;
