@@ -15,7 +15,7 @@ const desUs = document.getElementById("descripcion");
 const catUs = document.getElementById("categoria");
 const tieUs = document.getElementById("tiempo");
 // const prioUs = document.getElementById("")
-
+const estUs = document.getElementById("estado")
 
 titUs.addEventListener("input", () => {
     const regExp = /^.{3,60}$/m;
