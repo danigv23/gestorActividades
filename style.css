@@ -239,6 +239,10 @@ button:hover {
     border: 3px solid red;
 }
 
+#form .cor {
+    border: 3px solid rgb(9, 255, 0);
+}
+
 #form #check {
     display: flex;
     flex-direction: row;

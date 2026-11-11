@@ -25,6 +25,7 @@ titUs.addEventListener("input", () => {
         titUs.classList.add("inc");
     } else {
         titUs.classList.remove("inc");
+        titUs.classList.add("cor");
     };
 });
 
