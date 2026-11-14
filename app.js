@@ -1,3 +1,5 @@
+import { GestorActividades } from "./clases/GestorActividades.js";
+
 const formulario = document.getElementById("form");
 const botEli = document.getElementById("eliAct");
 const newAct = document.getElementById("newAct");

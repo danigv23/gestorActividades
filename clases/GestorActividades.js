@@ -1,8 +1,12 @@
-class GestorActividades {
+import { Actividad } from "./Actividad.js";
+import * as fs from 'node:fs';
+
+export class GestorActividades {
     #actividades = [];
     #proxID = 1;
 
     constructor() {
+        console.log("fahsdf")
         this.primeras6Act()
     }
 
@@ -44,11 +48,13 @@ class GestorActividades {
     }
 
     primeras6Act() {
+        const buffer = fs.readFileSync("../primeras6.csv");
+        let contenido = buffer.toString();
 
-        //Creamos las 6 primeras actividades
+        let filas = contenido.split("\n")
+        for (const fila of filas) {
+            this.newAct(fila);
+
+        }
     }
-
-
-
-
 }
