@@ -2,28 +2,34 @@ class Actividad {
     id
     titulo
     categoria
-    descripcion
     tiempo
     prioridad
     estado = 1
 
-
-    constructor(titulo, descripcion, categoria, tiempo, prioridad, estado) {
+    constructor(id, titulo, categoria, tiempo, prioridad, estado) {
+        this.id = id;
         this.titulo = titulo;
         this.categoria = categoria;
-        this.descripcion = descripcion;
         this.tiempo = tiempo;
         this.prioridad = prioridad;
         this.estado = estado;
     }
 
-    acabarAct() {
-        if (this.tiempo <= 0) {
-            this.estado = 0;
-        };
+    cambiarEstado() {
+        // Modifica de pendiente a acabas
     };
 
-    editarActividad() {
-
+    completada() {
+        // Devuelve true o false en funcion de si esta completada o no
     }
+
+    actualizarDatos() {
+        // Permite cambiar los datos de la actividad (TODOS LOS DATOS MENOS EL ID)
+    }
+
+    validarDatos() {
+        // DEBERIA DE SER UN METODO ESTATICO
+        // Nos permite valdiar los datos antes de crear una instancia de ACTIVIDAD
+    }
+
 }

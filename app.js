@@ -1,4 +1,5 @@
 const formulario = document.getElementById("form");
+const botEli = document.getElementById("eliAct");
 const newAct = document.getElementById("newAct");
 const canAct = document.getElementById("canAct");
 const addAct = document.getElementById("addAct");
@@ -8,13 +9,23 @@ const outTiempo = document.getElementById("valTiempo");
 let titUs = document.getElementById("titulo");
 let tieUs = document.getElementById("tiempo");
 
+let gridActividades = document.getElementById("gridAct");
+
+const gestor = new GestorActividades();
+
+addAct.addEventListener("click", () => {
+    gridActividades = document.getElementById("gridAct");
+})
+
 newAct.addEventListener("click", () => {
+    botEli.hidden = true;
     formulario.hidden = false;
     mostrarValor()
 })
 
 canAct.addEventListener("click", () => {
     formulario.hidden = true;
+
 })
 
 
@@ -35,30 +46,27 @@ function mostrarValor() {
 
 tieUs.addEventListener("input", mostrarValor);
 
-formulario.addEventListener("submit", () => {
+formulario.addEventListener("submit", (event) => {
     event.preventDefault();
 
     titUs = document.getElementById("titulo");
     tieUs = document.getElementById("tiempo");
-    let desUs = document.getElementById("descripcion");
     let catUs = document.getElementById("categoria");
     let estUs = document.getElementById("estado").checked;
     let prioUs = document.querySelector('input[name="prioridad"]:checked');;
 
     const dataNewAct = {
         tit: titUs.value,
-        des: desUs.value,
         cat: catUs.value,
         time: tieUs.value,
         prio: prioUs.value,
-        comp: estUs
+        est: estUs
     };
-    nuevaAct(dataNewAct.tit, dataNewAct.time);
-})
 
-function nuevaAct(titulo, tiempo) {
-    const gridActividades = document.getElementById("gridAct");
+    nuevaActHTML(dataNewAct);
+});
 
+function nuevaActHTML(act) {
     const botEditar = document.createElement("button");
     const botFinalizar = document.createElement("button");
     botEditar.textContent = "Editar";
@@ -67,18 +75,19 @@ function nuevaAct(titulo, tiempo) {
     const bot = document.createElement("div");
     const pTime = document.createElement("p");
     bot.classList.add("bot");
-    pTime.textContent = `${tiempo} mins`;
+    pTime.textContent = `${act.time} mins`;
 
     const img = document.createElement("img");
     const h1 = document.createElement("h1");
     const sub = document.createElement("div");
     img.src = "./img/logo.png";
     img.alt = "Ilustracion actividad";
-    h1.textContent = titulo;
+    h1.textContent = act.tit;
     sub.classList.add("sub");
 
     const card = document.createElement("div");
     card.classList.add("card");
+    card.id = gridActividades.children.length;
 
     bot.append(botEditar, botFinalizar);
     sub.append(pTime, bot);
@@ -86,5 +95,23 @@ function nuevaAct(titulo, tiempo) {
 
     gridActividades.append(card);
     formulario.hidden = true;
+
+    gestor.newAct(act);
 }
 
+const botonesEditar = document.getElementsByClassName("edit");
+
+for (const botonEditar of botonesEditar) {
+
+    botonEditar.addEventListener("click", () => {
+        gridActividades = document.getElementById("gridAct");
+        botEli.hidden = false;
+
+        const cardSelected = botonEditar.closest(".card");
+        formulario.hidden = false;
+    })
+}
+
+
+
+// HACER QUE SE MUESTREN LAS 6 PRUIMERAS ACTIVIDADES DESDE EL GESTOR
